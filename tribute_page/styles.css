@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box; 
+}
+
+body {
+  font-family:  sans-serif;
+  margin: 30px 8px;
+  letter-spacing: 1px;
+}
+
+main {
+  background-color: #eeeeee;
+  padding: 30px 15px; 
+  border-radius: 8px;
+  max-width: 1500px;
+  margin: 0 auto;
+  
+}
+
+main h1 {
+  text-align: center;
+}
+
+main > p {
+  text-align: center;
+  opacity: 0.8;
+}
+
+main > figure {
+  background-color: #fff;
+  margin: 0;
+  padding: 20px 8px;
+}
+
+main > figure > img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+main > figure > figcaption {
+  margin-top: 20px;
+  text-align: center;
+}
+
+section > h3 {
+  text-align:  center;
+  margin: 50px 0 30px;
+}
+
+section > ul {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+section > ul > li {
+  margin: 20px 0 0;
+}
+
+section > blockquote {
+  max-width: 600px;
+  margin: 50px auto 10px;
+}
