@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name='viewport' content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Web development practice project for creating a survey form" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Thank you for taking the time to help us improve the platform</p>
+      <form id="form">
+        <fieldset class="first-fieldset"> 
+          <legend>Student's Info</legend>
+          <label id="name-label" for="name">Name </label><input autofocus type="text" id="name" required placeholder="Enter your name" />
+          <label id="email-label" for="email">Email </label><input type="email" id="email" required placeholder="Enter your email" />
+          <label id='number-label' for='number'>Number </label><input type='number' id='number' min='20' max='1000' placeholder='Enter your number' />
+        </fieldset>
+        <fieldset class="second-fieldset">
+          <legend>Billing Info</legend>
+          <label for="dropdown">Free/Premium  </label>
+          <select id="dropdown">
+            <option value="free">Free</option>
+            <option value="premium">Premium</option>
+          </select>
+        </fieldset>
+        <fieldset class="third-fieldset">
+          <legend>Course</legend>
+          <label for="html"><input id="html" type="radio" name="html-css" value="html">HTML</label>
+          <label for="css"><input id="css" type="radio" name="html-css" value="css" />CSS</label>
+          <label for="html"><input id="html" type="radio" name="html-css" value="js">Javascript</label>
+        </fieldset>
+        <fieldset class="fourth-fieldset">
+          <legend>Policies</legend>
+          <label for="emails"><input type="checkbox" id="emails" value="emails" checked> Send Me Emails</label>
+          <label for="conditions"><input type="checkbox" id="conditions" value="conditions" checked> Accept Terms and Conditions</label>
+        </fieldset>
+        <fieldset class="fifth-fieldset">
+          <legend>Bio</legend>
+          <textarea rows="6" cols="30" placeholder="Enter short bio about you (optional)"></textarea>
+        </fieldset>
+        <input type="submit" id="submit" value="Send" />
+      </form>
+    </main>
+  </body>
+</html>
