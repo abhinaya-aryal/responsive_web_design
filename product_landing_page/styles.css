@@ -1,0 +1,201 @@
+:root {
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --grey-color: rgba(255, 255, 255, 0.8);
+  --grey-black-color: rgba(0, 0, 0, 0.7);
+  --blue-color: #b6c7cf;
+  --padding-main: 0 12rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  margin: auto;
+  max-width: 1440px;
+}
+
+header {
+  background-color: var(--black-color);
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-main);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1440px;
+  z-index: 1;
+}
+
+/* .logo-container { */
+/* height: 90%; */
+/* width: max-content; */
+/* overflow: hidden; */
+/* } */
+.logo-container p {
+  color: var(--white-color);
+  font-size: 3.6rem;
+  font-weight: bolder;
+}
+
+.logo-container p span {
+  color: blue;
+}
+
+header > .logo-container > img {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+nav > ul {
+  list-style-type: none;
+}
+
+nav > ul > li {
+  float: left;
+}
+
+nav > ul > li:not(:last-of-type) {
+  margin-right: 5rem;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: var(--grey-color);
+}
+
+nav > ul > li > a:hover {
+  color: var(--white-color);
+}
+
+.hero {
+  height: calc(100vh - 7rem);
+}
+
+.top-hero {
+  background: linear-gradient(to bottom, #ffffff, #fafafa);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65%;
+  padding: var(--padding-main);
+  margin-top: 7rem;
+}
+
+.img-container {
+  height: max-content;
+  max-height: 100%;
+  overflow: hidden;
+  /* background-color: red; */
+}
+
+.top-hero > div {
+  flex: 1;
+}
+
+.img-container > img {
+  display: block;
+  height: 100%;
+  /* object-fit: center center; */
+  width: 350px;
+  max-width: 100%;
+  margin: auto;
+  margin-top: -20px;
+  /* transform: scale(0.5); */
+}
+
+.hero-desc > h1 {
+  font-size: 4.4rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.hero-desc > h1 > span {
+  color: blue;
+}
+
+.hero-desc > p {
+  font-size: 1.6rem;
+  color: var(--grey-black-color);
+  width: 50%;
+  margin-top: 2rem;
+}
+
+.hero-desc button {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  border-radius: 15px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  margin-top: 2.8rem;
+}
+
+.bottom-hero {
+  background-color: var(--black-color);
+  height: 35%;
+  color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-main);
+  gap: 2rem;
+}
+
+.bottom-hero-item {
+  max-width: 300px;
+}
+
+.bottom-hero-item > div {
+  height: 50px;
+  width: 50px;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  margin: auto;
+}
+
+.bottom-hero-item > h4,
+.bottom-hero-item p {
+  text-align: center;
+}
+
+.bottom-hero-item > h4 {
+  font-size: 1.8rem;
+  margin-top: 1.6rem;
+}
+
+.bottom-hero-item > p {
+  font-size: 1.6rem;
+  color: var(--grey-color);
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-color: var(--black-color);
+  }
+}
