@@ -104,7 +104,6 @@ nav > ul > li > a:hover {
   height: max-content;
   max-height: 100%;
   overflow: hidden;
-  /* background-color: red; */
 }
 
 .top-hero > div {
@@ -135,7 +134,7 @@ nav > ul > li > a:hover {
 .hero-desc > p {
   font-size: 1.6rem;
   color: var(--grey-black-color);
-  width: 50%;
+  width: 70%;
   margin-top: 2rem;
 }
 
@@ -149,6 +148,7 @@ nav > ul > li > a:hover {
   font-weight: 300;
   letter-spacing: 1.5px;
   margin-top: 2.8rem;
+  border: 0;
 }
 
 .bottom-hero {
@@ -194,8 +194,50 @@ nav > ul > li > a:hover {
   color: var(--grey-color);
 }
 
+.about {
+  background-color: var(--grey-color);
+}
+
 @media (min-width: 1440px) {
   body {
     background-color: var(--black-color);
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    --padding-main: 0 1rem;
+  }
+  .hero {
+    height: max-content;
+  }
+
+  .top-hero {
+    height: max-content;
+    flex-direction: column-reverse;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero-desc {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-desc > p {
+    width: 100%;
+  }
+
+  .bottom-hero {
+    height: max-content;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-desc > button {
+    margin-bottom: 2rem;
   }
 }
