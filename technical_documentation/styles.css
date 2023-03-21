@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+:root {
+  --black: #111111;
+  --white: #eeeeee;
+}
 
 * {
   scroll-behavior: smooth;
@@ -7,10 +12,9 @@
 }
 
 body {
-  color: #fff;
-  background-color: #000;
+  color: #111111;
+  background-color: var(--white);
   font-family: Open Sans, sans-serif;
-  
 }
 
 nav {
@@ -19,8 +23,8 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #000;;
-  border-right: 2px solid #ffffff;
+  background-color: var(--white);
+  border-right: 2px solid var(--black);
   z-index: 1;
 }
 
@@ -29,13 +33,13 @@ nav > ul {
   padding: 0;
 }
 
-nav > ul > li{
-  border-top: 1px solid white;
+nav > ul > li {
+  border-top: 1px solid var(--black);
   width: 100%;
 }
 
 nav > ul > li > a {
-  color: #ffffff;
+  color: var(--black);
   text-decoration: none;
   font-size: 16px;
   display: block;
@@ -82,7 +86,8 @@ main li {
 
 main pre {
   margin-bottom: 20px;
-  background-color: rgba(17, 17, 47, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--white);
   padding: 20px;
   border-radius: 4px;
   white-space: break-spaces;
@@ -98,17 +103,16 @@ nav > header {
 
 @media (max-width: 850px) {
   nav {
-    background-color: rgba(17, 17, 47, 0.6);
     position: absolute;
-    top: 0; 
+    top: 0;
     padding: 0;
     margin: 0;
     width: 100%;
     max-height: 275px;
     border: none;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--black);
     display: block;
-  } 
+  }
 
   nav > header {
     text-align: center;
@@ -120,9 +124,9 @@ nav > header {
   }
 
   nav > ul > li:first-of-type {
-    border-top: 2px solid white;
+    border-top: 2px solid var(--black);
   }
- 
+
   main {
     position: relative;
     margin-left: 0px;
