@@ -2,7 +2,7 @@
   --nav-color: #be3144;
   --white-color: #fff;
   --black-color: #000;
-  --content-padding: 0 11rem;
+  --content-padding: 11rem;
   --blue-color: #45567d;
 }
 
@@ -18,6 +18,11 @@ html {
   font-size: 62.5%;
   font-family: Poppins, sans-serif;
   scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 a {
@@ -33,13 +38,14 @@ header {
   background-color: var(--nav-color);
   height: 7rem;
   color: var(--white-color);
+  box-shadow: 0px 0px 12px 1px black;
 }
 
 nav {
   display: flex;
   height: 100%;
   justify-content: space-between;
-  padding: var(--content-padding);
+  padding: 0 var(--content-padding);
   align-items: center;
 }
 
@@ -82,6 +88,92 @@ section.hero > p {
 }
 
 section.work {
-  height: 100vh;
+  height: max-content;
   background-color: var(--blue-color);
+  padding: 6rem var(--content-padding);
+}
+
+section.work h2 {
+  font-size: 4.2rem;
+  text-align: center;
+  font-weight: bolder;
+  color: var(--white-color);
+  text-decoration: underline;
+  text-underline-offset: 14px;
+}
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-top: 6rem;
+}
+
+.project-tile {
+  background-color: var(--black-color);
+  margin: auto;
+}
+
+.project-tile img {
+  display: block;
+  width: 340px;
+  height: 340px;
+}
+
+.project-tile p {
+  padding: 1.6rem 0;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.project-tile p span {
+  color: var(--nav-color);
+  visibility: hidden;
+}
+
+.project-tile:hover p span {
+  visibility: visible;
+}
+
+section.work button {
+  background-color: var(--black-color);
+  border: none;
+  color: var(--white-color);
+  font-size: 1.8rem;
+  font-family: inherit;
+  padding: 2rem 4rem;
+  display: block;
+  margin: auto;
+  margin-top: 4rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+section.work > button > i {
+  margin-left: 10px;
+}
+
+section.work button:hover {
+  background-color: var(--nav-color);
+}
+
+@media (max-width: 800px) {
+  :root {
+    --content-padding: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  nav > div {
+    display: none;
+  }
+}
+
+@media (max-width: 366px) {
+  section.work {
+    padding: 6rem 5px;
+  }
 }
